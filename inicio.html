@@ -24,7 +24,7 @@
         }
         h1 {
             text-align: center;
-            font-size: 3em;
+            font-size: 2em; /* Ajustado para pantallas móviles */
             color: #000000;
             margin-bottom: 20px;
             font-weight: bold;
@@ -40,7 +40,7 @@
         }
         
         h2 {
-            font-size: 1.8em;
+            font-size: 1.5em; /* Ajustado para pantallas móviles */
             color: #000000;
             margin-bottom: 10px;
             border-bottom: 2px solid #2980b9;
@@ -48,7 +48,7 @@
         }
         p {
             line-height: 1.8;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-align: justify;
             margin-bottom: 20px;
             color: #000000;
@@ -61,7 +61,7 @@
             list-style-type: disc;
             margin-left: 20px;
             margin-bottom: 20px;
-            font-size: 1.1em;
+            font-size: 1em; /* Ajustado para pantallas móviles */
         }
         footer {
             text-align: center;
@@ -77,33 +77,59 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
+        /* Para dispositivos móviles, hacemos que las columnas ocupen todo el ancho */
         @media (max-width: 768px) {
             .column {
                 flex: 0 0 100%;
             }
+            h1 {
+                font-size: 1.8em; /* Ajustar el tamaño de la cabecera en móviles */
+            }
+            h2 {
+                font-size: 1.2em; /* Ajustar el tamaño del subtítulo en móviles */
+            }
+            p, ul {
+                font-size: 1em; /* Reducir el tamaño de texto en móviles */
+            }
         }
-        /* Styling for the images in the corners */
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 20px auto; /* Reducir márgenes en dispositivos muy pequeños */
+            }
+            h1 {
+                font-size: 1.5em; /* Aún más pequeño en pantallas muy pequeñas */
+            }
+            h2 {
+                font-size: 1em;
+            }
+            p, ul {
+                font-size: 0.9em; /* Texto más pequeño para que todo encaje mejor */
+            }
+        }
+
+        /* Estilos para las imágenes en las esquinas */
         .corner-image {
             position: absolute;
-            width: 109px;
+            width: 90px; /* Tamaño ajustado para móviles */
             height: auto;
         }
         .top-left {
-            top: 60px;
-            left: 60px;
+            top: 20px;
+            left: 20px;
         }
         .top-right {
-            top: 5px;
-            right:5px;
+            top: 20px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Images in the top corners -->
+    <!-- Imágenes en las esquinas superiores -->
     <img src="IMAGEN/WhatsApp Image 2024-09-20 at 5.43.35 PM.jpeg" alt="Imagen esquina izquierda" class="corner-image top-left">
-    
     
     <h1>Aviso de Privacidad</h1>
 
@@ -194,7 +220,6 @@
             <p>El procedimiento a través del cual se llevarán a cabo las notificaciones sobre cambios o actualizaciones al presente aviso de privacidad es el siguiente:</p>
             <p>Publicación en página y redes sociales</p>
             
-            
         </div>
     </div>
 
@@ -205,3 +230,4 @@
 
 </body>
 </html>
+
